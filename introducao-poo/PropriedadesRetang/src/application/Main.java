@@ -18,11 +18,6 @@ public class Main {
         Retangulo retanguloA = new Retangulo(entradaAltura, entradaLargura);
 
         //resultados
-//        System.out.println("-----------------------------------------------");
-//        System.out.println("INFORMACOES: ");
-//        System.out.println("Perimetro= " + retanguloA.calcularPerimetro());
-//        System.out.println("Area= " + retanguloA.calcularArea());
-//        System.out.println("Diagonal= " + retanguloA.calcularDiagonal());
         System.out.println(retanguloA);
 
         read.close();

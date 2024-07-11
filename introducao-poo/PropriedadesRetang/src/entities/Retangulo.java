@@ -12,6 +12,17 @@ public class Retangulo {
     }
 
 //metodos --------------------------------------------------------------------------
+
+
+    @Override
+    public String toString() {
+        return "-----------------------------------------------\n" +
+        "INFORMACOES\n" +
+        "Perimetro= " + calcularPerimetro() +
+        "\nArea= " + calcularArea() +
+        "\nDiagonal= " + calcularDiagonal();
+    }
+
     public double calcularPerimetro () {
     //perimetro retangulo = soma dos lados
         return (largura * 2) + (altura * 2);

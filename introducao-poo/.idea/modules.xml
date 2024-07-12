@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/ControleFuncionarios/ControleFuncionarios.iml" filepath="$PROJECT_DIR$/ControleFuncionarios/ControleFuncionarios.iml" />
       <module fileurl="file://$PROJECT_DIR$/ConversorDolar/ConversorDolar.iml" filepath="$PROJECT_DIR$/ConversorDolar/ConversorDolar.iml" />
       <module fileurl="file://$PROJECT_DIR$/Estoque/Estoque.iml" filepath="$PROJECT_DIR$/Estoque/Estoque.iml" />
       <module fileurl="file://$PROJECT_DIR$/PropriedadesRetang/PropriedadesRetang.iml" filepath="$PROJECT_DIR$/PropriedadesRetang/PropriedadesRetang.iml" />

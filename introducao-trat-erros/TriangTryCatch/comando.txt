@@ -1,0 +1,7 @@
+utilizar o mesmo exercicio da medida e comparacao das areas de um triangulo que foi feito na introducao-poo
+e apenas aplicar o tratamento de exceções adequado no momento da leitura do triangulo Y
+
+inicio 16 jul 2024 21:00
+fim: 16 jul 2024 23:00
+
+projeto finalizado ok

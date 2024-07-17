@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/TriangTryCatch/TriangTryCatch.iml" filepath="$PROJECT_DIR$/TriangTryCatch/TriangTryCatch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/introducao-trat-erros.iml" filepath="$PROJECT_DIR$/.idea/introducao-trat-erros.iml" />
+    </modules>
+  </component>
+</project>

@@ -6,7 +6,7 @@ public class Produto {
     double preco;
     int quantidadeEmEstoque;
 
-//    construtores ------------------------------------------------------------------------------
+//    construtores ----------------------------------------------------------------------------
     public Produto (String nome, double preco){
         this.nome = nome;
         this.preco = preco;

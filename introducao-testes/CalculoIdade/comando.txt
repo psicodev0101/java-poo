@@ -1,0 +1,10 @@
+Criar um projeto que instancie um objeto do tipo pessoa com os atributos
+obrigatorios "nome" e "ano de nascimento". Em seguida, calcular a idade
+através do uso de uma classe utilitária. No método main, retornar
+as informaçoes nome, ano de nascimento e idade. Fazer testes para as classes
+necessárias.
+
+inicio 22 jul 2024 20:40
+fim 22 jul 2024 21:47
+
+projeto finalizado ok

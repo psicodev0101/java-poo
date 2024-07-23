@@ -1,0 +1,9 @@
+criar um programa que possua uma entidade "triangulo" com os atributos para os 3 lados e
+um atributo String que armazene o seu tipo. O tipo será a classificacao do triangulo
+quanto ao lado em isoceles, escaleno ou equilatero, e deve ser realizada por uma classe utilitaria.
+faca testes para a funcao de classificacao.
+
+inicio: 23 jul 2024 10:20
+fim : 23 jul 2024 10:54
+
+projeto finalizado ok

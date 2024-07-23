@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CalculadoraBasica/CalculadoraBasica.iml" filepath="$PROJECT_DIR$/CalculadoraBasica/CalculadoraBasica.iml" />
       <module fileurl="file://$PROJECT_DIR$/CalculoIdade/CalculoIdade.iml" filepath="$PROJECT_DIR$/CalculoIdade/CalculoIdade.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ClassifTriangs/ClassifTriangs.iml" filepath="$PROJECT_DIR$/ClassifTriangs/ClassifTriangs.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/introducao-testes.iml" filepath="$PROJECT_DIR$/.idea/introducao-testes.iml" />
     </modules>
   </component>

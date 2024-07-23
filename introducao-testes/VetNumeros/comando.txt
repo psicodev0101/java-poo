@@ -1,0 +1,9 @@
+criar uma classe utilitaria que receba um determinado array, preencha o array com
+numeros de 0 até i; em seguida criar um teste que compare um array (preenchido à mao
+com os mesmos elementos) com o array fornecido pela classe utilitaria.
+
+
+inicio: 23 julho 2024 12:40
+fim: 23 julho 2024 13:00
+
+projeto finalizado ok

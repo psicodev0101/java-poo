@@ -1,6 +1,7 @@
 package JFrame;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 
 public class Screen extends JFrame {
@@ -39,10 +40,9 @@ public class Screen extends JFrame {
         add(textFieldA);
         textFieldB = new TextField( 40);
         add(textFieldB);
-
-        //campo de texto mostrar resultado
-        textFieldC = new TextField( 70);
+        textFieldC = new TextField( 70); //campo de texto mostrar resultado
         add(textFieldC);
+
 
         //botao de acao
         clickButtonSOMA = new ClickButton("SOMAR");

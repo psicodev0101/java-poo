@@ -5,6 +5,9 @@ import java.awt.event.ActionEvent;
 
 public class Screen extends JFrame {
 //atributos ---------------------------------------------------------------------
+    Label labelA;
+    Label labelB;
+    Label labelC;
     TextField textFieldA;
     TextField textFieldB;
     TextField textFieldC;
@@ -24,6 +27,14 @@ public class Screen extends JFrame {
 
 
         //campos de texto insercao
+        labelA = new Label("Numero A:", 10);
+        add(labelA);
+        labelB = new Label("Numero B:", 40);
+        add(labelB);
+        labelC = new Label("Resultado: ", 70);
+        labelC.setAlignmentX(40);
+        add(labelC);
+
         textFieldA = new TextField( 10);
         add(textFieldA);
         textFieldB = new TextField( 40);

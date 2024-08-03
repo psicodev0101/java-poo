@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="jframe-intro:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/jframe_intro_jar</output-path>
-    <root id="archive" name="jframe-intro.jar">
-      <element id="module-output" name="jframe-intro" />
-    </root>
-  </artifact>
-</component>

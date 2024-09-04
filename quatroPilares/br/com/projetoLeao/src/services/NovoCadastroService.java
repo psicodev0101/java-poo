@@ -6,9 +6,9 @@ import models.ContribuinteCpf;
 
 public class NovoCadastroService {
 
-    public Contribuinte contribuinte;
-
     public NovoCadastroService(Contribuinte contribuinte) {
+        gerarTaxa(contribuinte);
+        //falta colocar o metodo de persistir
     }
 
     public void gerarTaxa (Contribuinte contribuinte) {

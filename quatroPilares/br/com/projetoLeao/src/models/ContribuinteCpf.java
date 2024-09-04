@@ -15,8 +15,4 @@ public class ContribuinteCpf extends Contribuinte {
     }
 //metodos -----------------------------------------------------------------
 
-    public void calcularTaxa() {
-
-    }
-
 }

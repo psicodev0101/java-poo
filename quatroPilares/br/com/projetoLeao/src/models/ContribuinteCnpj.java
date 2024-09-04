@@ -16,10 +16,5 @@ public class ContribuinteCnpj extends Contribuinte {
     }
 //metodos -----------------------------------------------------------------
 
-    public void calcularTaxa (){
-
-    }
-
-
 
 }

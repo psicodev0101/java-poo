@@ -3,24 +3,27 @@ package services;
 import models.Contribuinte;
 import models.ContribuinteCnpj;
 import models.ContribuinteCpf;
+import models.DatabaseLeao;
 
 public class NovoCadastroService {
 
-    public NovoCadastroService(Contribuinte contribuinte) {
-        gerarTaxa(contribuinte);
-        //falta colocar o metodo de persistir
+    public NovoCadastroService(Contribuinte contribuinte, DatabaseLeao databaseLeao) {
+        contribuinte.taxa = gerarTaxa(contribuinte);
+        databaseLeao.guardarContribuinte(contribuinte);
+
     }
 
-    public void gerarTaxa (Contribuinte contribuinte) {
+    public double gerarTaxa (Contribuinte contribuinte) {
         CobrancaImpService cobrancaImpService;
+        double resultado = 0D;
         if (contribuinte instanceof ContribuinteCpf){
             cobrancaImpService = new CobrancaImpCpfService();
-            contribuinte.taxa = cobrancaImpService.calcularImposto(contribuinte);
+            resultado = cobrancaImpService.calcularImposto(contribuinte);
         } else if (contribuinte instanceof ContribuinteCnpj){
             cobrancaImpService = new CobrancaImpCnpjService();
-            contribuinte.taxa = cobrancaImpService.calcularImposto(contribuinte);
+            resultado = cobrancaImpService.calcularImposto(contribuinte);
         }
+        return resultado;
     }
-
 
 }

@@ -9,9 +9,9 @@ public class CobrancaImpCnpjService implements CobrancaImpService{
     public double calcularImposto(Contribuinte contribuinte) {
         ContribuinteCnpj contribuinteCnpj = (ContribuinteCnpj) contribuinte;
 
-        double imposto = 16D / 100 * contribuinteCnpj.rendaAnual;
+        double imposto = Math.round(16D / 100 * contribuinteCnpj.rendaAnual);
         if (contribuinteCnpj.getQuantFuncionarios() > 10) {
-            imposto = 14D / 100 * contribuinteCnpj.rendaAnual;
+            imposto = Math.round(14D / 100 * contribuinteCnpj.rendaAnual);
         }
 
         return imposto;

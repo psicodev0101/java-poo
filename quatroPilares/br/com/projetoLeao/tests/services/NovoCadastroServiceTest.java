@@ -46,8 +46,13 @@ class NovoCadastroServiceTest {
 
     @Test
     void gerarTaxaTeste() {
-        contribTesteA.taxa = novoCadastroService.gerarTaxa(contribTesteA);
-        assertEquals(100D, contribTesteA.taxa);
+        assertEquals(100D, novoCadastroService.gerarTaxa(contribTesteA));
+        assertEquals(375D, novoCadastroService.gerarTaxa(contribTesteB));
+        assertEquals(955D, novoCadastroService.gerarTaxa(contribTesteC));
+
+        assertEquals(7280D, novoCadastroService.gerarTaxa(contribTesteD));
+        assertEquals(2240D, novoCadastroService.gerarTaxa(contribTesteE));
+        assertEquals(1640D, novoCadastroService.gerarTaxa(contribTesteF));
         //finalizar teste aqui
     }
 }

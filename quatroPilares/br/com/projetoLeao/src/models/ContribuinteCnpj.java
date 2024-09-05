@@ -2,18 +2,20 @@ package models;
 
 public class ContribuinteCnpj extends Contribuinte {
 
-    private String cnpj;
-    private int quantFuncionarios;
+    private final int quantFuncionarios;
 
     //Construtores ------------------------------------------------------------
     public ContribuinteCnpj(String nome,
                            Double rendaAnual,
-                           String cnpj,
                            int quantFuncionarios){
         super(nome, rendaAnual);
-       this.cnpj = cnpj;
-       this.quantFuncionarios = quantFuncionarios;
+        this.quantFuncionarios = quantFuncionarios;
     }
+//getters e setters---------------------------------------------------------
+    public int getQuantFuncionarios (){
+        return quantFuncionarios;
+    }
+
 //metodos -----------------------------------------------------------------
 
 

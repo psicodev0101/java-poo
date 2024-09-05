@@ -1,31 +1,32 @@
+import models.Contribuinte;
 import models.ContribuinteCnpj;
 import models.ContribuinteCpf;
 import models.DatabaseLeao;
 import services.NovoCadastroService;
 
-import javax.xml.crypto.Data;
-
 public class Main {
     public static void main(String[] args) {
+
         DatabaseLeao databaseLeao = new DatabaseLeao();
+        NovoCadastroService novoCadastroService = new NovoCadastroService(databaseLeao);
 
-        ContribuinteCpf contribA = new ContribuinteCpf("Adilson", 2500D, "02206658267", 500D);
-        NovoCadastroService novoCadastroService = new NovoCadastroService(contribA,databaseLeao);
-        novoCadastroService.gerarTaxa(contribA);
+        //criando objetos ContribuinteCpf
+        novoCadastroService.cadastrar(new ContribuinteCpf("Adailson", 1500D, 250D));
+        novoCadastroService.cadastrar(new ContribuinteCpf("Adalberto", 2500D, 500D));
+        novoCadastroService.cadastrar(new ContribuinteCpf("Adalvano", 4500D, 340D));
+        novoCadastroService.cadastrar(new ContribuinteCpf("Adalnildo", 1200D, 0D));
+        novoCadastroService.cadastrar(new ContribuinteCpf("Adalgilson", 3450D, 750D));
 
-        ContribuinteCnpj contribB = new ContribuinteCnpj("OdontoC", 65000D, "032140000132", 25);
-        novoCadastroService = new NovoCadastroService(contribB,databaseLeao);
-        novoCadastroService.gerarTaxa(contribB);
+        //criando objetos ContribuinteCnpj
+        Contribuinte contF = new ContribuinteCnpj("OdontoVida", 52000D, 50);
 
-        System.out.println("nome: " + contribA.nome);
-        System.out.println("taxa: " + contribA.taxa);
-        System.out.println("nome: " + contribB.nome);
-        System.out.println("taxa: " + contribB.taxa);
-        databaseLeao.calcularImpostometro();
+        Contribuinte contG = new ContribuinteCnpj("OdontoBem", 14000D, 10);
+
+        Contribuinte contH = new ContribuinteCnpj("OdontoLife", 10250D, 8);
+
+        Contribuinte contI = new ContribuinteCnpj("OdontoClean", 100000D, 60);
+
+        Contribuinte contJ = new ContribuinteCnpj("OdontoFix", 40000D, 2);
     }
-
-    //testes feitos. ok
-    //salvando. ok
-    //falta apenas implementar os testes automatizados
 
 }

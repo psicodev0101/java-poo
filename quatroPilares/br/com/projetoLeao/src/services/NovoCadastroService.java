@@ -5,12 +5,21 @@ import models.ContribuinteCnpj;
 import models.ContribuinteCpf;
 import models.DatabaseLeao;
 
+import java.util.ArrayList;
+
 public class NovoCadastroService {
 
-    public NovoCadastroService(Contribuinte contribuinte, DatabaseLeao databaseLeao) {
+    private final DatabaseLeao databaseLeao;
+
+//construtores ---------------------------------------------------------------
+    public NovoCadastroService(DatabaseLeao databaseLeao) {
+        this.databaseLeao = databaseLeao;
+    }
+
+//métodos -----------------------------------------------------------------------------------------
+    public void cadastrar(Contribuinte contribuinte) {
         contribuinte.taxa = gerarTaxa(contribuinte);
         databaseLeao.guardarContribuinte(contribuinte);
-
     }
 
     public double gerarTaxa (Contribuinte contribuinte) {
@@ -25,5 +34,7 @@ public class NovoCadastroService {
         }
         return resultado;
     }
+
+
 
 }

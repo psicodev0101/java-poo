@@ -1,14 +1,20 @@
 package services;
 
 import models.Contribuinte;
+import models.ContribuinteCnpj;
 
 public class CobrancaImpCnpjService implements CobrancaImpService{
+
     @Override
     public double calcularImposto(Contribuinte contribuinte) {
-        double imposto = 0.0;
-        if (contribuinte.rendaAnual > 50000) {
-            imposto = 20D / 100 * contribuinte.rendaAnual;
+        ContribuinteCnpj contribuinteCnpj = (ContribuinteCnpj) contribuinte;
+
+        double imposto = 16D / 100 * contribuinteCnpj.rendaAnual;
+        if (contribuinteCnpj.getQuantFuncionarios() > 10) {
+            imposto = 14D / 100 * contribuinteCnpj.rendaAnual;
         }
+
         return imposto;
     }
+
 }

@@ -1,5 +1,9 @@
 package models;
 
+import services.PixSaqueService;
+import services.SaqueCaixaEletService;
+import services.SaqueService;
+
 public abstract class Conta {
 
     private final int numeroConta;
@@ -19,11 +23,20 @@ public abstract class Conta {
         return titularConta;
     }
 
-    public double exibirSaldo() {
+    public double getSaldoConta() {
         return saldoConta;
     }
 
-    public abstract void depositar (double valor);
-    public abstract void sacar (double valor);
+    public void setSaldoConta (double valor) {
+        saldoConta = valor;
+    }
 
+    public abstract void depositar (double valor);
+
+    //public abstract void sacar (double valor);
+        /*precisei inutilizar isso aqui pq quando fiz o metodo sacar usando
+        * injeçao de SaqueService a IDE pediu pra eu atualizar o metodo abstrato
+        * sacar aqui nessa classe, pra poder os parametros baterem*/
+
+    public abstract void sacar(double valor, SaqueService saqueService);
 }

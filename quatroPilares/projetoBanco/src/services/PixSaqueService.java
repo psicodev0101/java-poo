@@ -1,4 +1,4 @@
 package services;
 
-public class PixSaqueService {
+public class PixSaqueService implements SaqueService{
 }

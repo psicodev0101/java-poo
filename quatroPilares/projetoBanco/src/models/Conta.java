@@ -19,7 +19,7 @@ public abstract class Conta {
         return titularConta;
     }
 
-    public double getSaldoConta() {
+    public double exibirSaldo() {
         return saldoConta;
     }
 

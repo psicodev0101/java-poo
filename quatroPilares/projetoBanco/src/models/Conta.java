@@ -38,5 +38,5 @@ public abstract class Conta {
         * injeçao de SaqueService a IDE pediu pra eu atualizar o metodo abstrato
         * sacar aqui nessa classe, pra poder os parametros baterem*/
 
-    public abstract void sacar(double valor, SaqueService saqueService);
+    public abstract boolean sacar(double valor, SaqueService saqueService);
 }

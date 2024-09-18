@@ -1,7 +1,5 @@
 package models;
 
-import services.PixSaqueService;
-import services.SaqueCaixaEletService;
 import services.SaqueService;
 
 public class ContaCorrente extends Conta {
@@ -21,7 +19,12 @@ public class ContaCorrente extends Conta {
     }
 
     @Override
-    public void sacar(double valor, SaqueService saqueService) {
+    public boolean sacar(double valor, SaqueService saqueService) {
+        if (valor <= this.getSaldoConta() + this.limiteChequeEsp) {
+            return saqueService.sacar(valor, this);
+        } else {
+            System.out.println("ERRO: Saldo insuficiente!");
+        }
         /*LEMBRAR: agora preciso implementar os metodos dentro das classes pix saque e saque
         * caixa. os metodos devem receber um valor e uma conta (no caso, essa [this])
         * na hora de escrever o main, basta instanciar um "new PixSaqueService" ou
@@ -31,6 +34,7 @@ public class ContaCorrente extends Conta {
         * dentro dos limites do saldo + cheque esp; isso nao compete ao serviço de sacar
         * pois esse serviço tambem sera usado na conta poupanca, onde as regras de
         * negocio sao diferentes.*/
+        return false;
     }
 
 

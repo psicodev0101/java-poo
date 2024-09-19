@@ -1,6 +1,7 @@
 package services;
 
 import models.Conta;
+import models.ContaCorrente;
 
 public class SaqueCaixaEletService implements SaqueService {
 
@@ -8,8 +9,15 @@ public class SaqueCaixaEletService implements SaqueService {
 
     @Override
     public boolean sacar(double valor, Conta conta) {
-        double valorComTaxa = valor + TAXA_SAQUE;
-            conta.setSaldoConta(valor);
+        conta.setSaldoConta(conta.getSaldoConta() - (valor + TAXA_SAQUE));
         return false;
+    }
+
+    public boolean confirmarSaqueCC(double valor, Conta conta, int limiteChequeEspecial) {
+        return valor + TAXA_SAQUE <= conta.getSaldoConta() + limiteChequeEspecial;
+    }
+
+    public boolean confirmarSaquePoupanca (double valor, Conta conta) {
+        return valor + TAXA_SAQUE <= conta.getSaldoConta();
     }
 }

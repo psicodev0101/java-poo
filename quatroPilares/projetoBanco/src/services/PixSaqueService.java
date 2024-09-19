@@ -8,4 +8,14 @@ public class PixSaqueService implements SaqueService{
 
         return false;
     }
+
+    @Override
+    public boolean confirmarSaqueCC(double Valor, Conta conta, int limiteChequeEspecial) {
+        return false;
+    }
+
+    @Override
+    public boolean confirmarSaquePoupanca(double valor, Conta conta) {
+        return false;
+    }
 }

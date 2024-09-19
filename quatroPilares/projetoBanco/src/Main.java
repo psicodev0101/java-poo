@@ -7,8 +7,12 @@ public class Main {
         Conta contaA = new ContaCorrente(123, "Pedro", 120);
         contaA.depositar(200D);
         System.out.println(contaA.getSaldoConta());
-        contaA.sacar(320, new SaqueCaixaEletService());
+        contaA.sacar(320D, new SaqueCaixaEletService());
         System.out.println(contaA.getSaldoConta());
     }
+
+    //preciso adicionar o campo de limite saque pix direto na classe abstrata Conta
+
+
 
 }

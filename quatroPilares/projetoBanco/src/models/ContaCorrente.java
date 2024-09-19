@@ -35,7 +35,7 @@ public class ContaCorrente extends Conta {
 
     @Override
     public boolean sacar(double valor, SaqueService saqueService) {
-        if (saqueService.confirmarSaqueCC(valor, this, this.getLimiteChequeEsp())) {
+        if (saqueService.confirmarSaqueCC(valor, this)) {
             return saqueService.sacar(valor, this);
         } else {
             System.out.println("ERRO: Saldo insuficiente!");

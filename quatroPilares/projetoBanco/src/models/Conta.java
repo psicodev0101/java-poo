@@ -9,6 +9,7 @@ public abstract class Conta {
     private final int numeroConta;
     private final String titularConta;
     private double saldoConta;
+    private int limiteSaquePix = 10;
 
     public Conta (int numeroConta, String titularConta){
         this.numeroConta = numeroConta;
@@ -29,6 +30,14 @@ public abstract class Conta {
 
     public void setSaldoConta (double valor) {
         saldoConta = valor;
+    }
+
+    public int getLimiteSaquePix() {
+        return limiteSaquePix;
+    }
+
+    public void setLimiteSaquePix(int limiteSaquePix) {
+        this.limiteSaquePix = limiteSaquePix;
     }
 
     public abstract void depositar (double valor);

@@ -4,20 +4,11 @@ import services.SaqueService;
 
 public class ContaCorrente extends Conta {
 
-    private int limiteSaquePix = 10;
     private int limiteChequeEsp;
 
     public ContaCorrente(int numeroConta, String titularConta, int limiteChequeEsp) {
         super(numeroConta, titularConta);
         this.limiteChequeEsp = limiteChequeEsp;
-    }
-
-    public int getLimiteSaquePix() {
-        return limiteSaquePix;
-    }
-
-    public void setLimiteSaquePix(int limiteSaquePix) {
-        this.limiteSaquePix = limiteSaquePix;
     }
 
     public int getLimiteChequeEsp() {

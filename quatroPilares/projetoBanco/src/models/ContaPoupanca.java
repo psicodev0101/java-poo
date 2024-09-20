@@ -5,18 +5,9 @@ import services.SaqueService;
 public class ContaPoupanca extends Conta {
 
     private static final double TAXA_JUROS = 6.5D;
-    private int limiteSaquePix = 10;
 
     public ContaPoupanca(int numeroConta, String titularConta) {
         super(numeroConta, titularConta);
-    }
-
-    public int getLimiteSaquePix() {
-        return limiteSaquePix;
-    }
-
-    public void setLimiteSaquePix(int limiteSaquePix) {
-        this.limiteSaquePix = limiteSaquePix;
     }
 
     @Override

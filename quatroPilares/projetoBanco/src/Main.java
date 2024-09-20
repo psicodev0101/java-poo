@@ -1,3 +1,4 @@
+import models.Banco;
 import models.Conta;
 import models.ContaCorrente;
 import models.ContaPoupanca;
@@ -7,17 +8,21 @@ import services.SaqueCaixaEletService;
 public class Main {
     public static void main(String[] args) {
 
+        Banco bmg = new Banco();
+
         System.out.println("testando com conta corrente");
 
-        Conta contaA = new ContaCorrente(123, "Pedro", 120);
-        contaA.depositar(200D);
-        System.out.println(contaA.getSaldoConta());
+        bmg.abrirContaCorrente(123, "pedro", 120);
+
+        Conta contaATest = bmg.acessarConta(123);
+        contaATest.depositar(200D);
+        System.out.println(contaATest.getSaldoConta());
         System.out.println("Sacando de conta corrente via caixa eletronico:");
-        contaA.sacar(320D, new SaqueCaixaEletService());
-        System.out.println(contaA.getSaldoConta());
+        contaATest.sacar(320D, new SaqueCaixaEletService());
+        System.out.println(contaATest.getSaldoConta());
         System.out.println("Sacando de conta corrente via pix:");
-        contaA.sacar(320D, new PixSaqueService());
-        System.out.println(contaA.getSaldoConta());
+        contaATest.sacar(320D, new PixSaqueService());
+        System.out.println(contaATest.getSaldoConta());
 
         System.out.println("testando com conta poupanca");
 

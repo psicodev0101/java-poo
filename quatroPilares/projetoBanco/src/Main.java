@@ -14,19 +14,20 @@ public class Main {
 
         bmg.abrirContaCorrente(123, "pedro", 120);
 
-        Conta contaATest = bmg.acessarConta(123);
-        contaATest.depositar(200D);
-        System.out.println(contaATest.getSaldoConta());
+        Conta contaA = bmg.acessarConta(123);
+        contaA.depositar(200D);
+        System.out.println(contaA.getSaldoConta());
         System.out.println("Sacando de conta corrente via caixa eletronico:");
-        contaATest.sacar(320D, new SaqueCaixaEletService());
-        System.out.println(contaATest.getSaldoConta());
+        contaA.sacar(320D, new SaqueCaixaEletService());
+        System.out.println(contaA.getSaldoConta());
         System.out.println("Sacando de conta corrente via pix:");
-        contaATest.sacar(320D, new PixSaqueService());
-        System.out.println(contaATest.getSaldoConta());
+        contaA.sacar(320D, new PixSaqueService());
+        System.out.println(contaA.getSaldoConta());
 
         System.out.println("testando com conta poupanca");
 
-        Conta contaB = new ContaPoupanca(456, "zezinho");
+        bmg.abrirContaPoupanca(456, "zezinho");
+        Conta contaB = bmg.acessarConta(456);
         contaB.depositar(400D);
         System.out.println(contaB.getSaldoConta());
         System.out.println("Sacando de conta poupanca via caixa eletronico:");
@@ -36,10 +37,6 @@ public class Main {
         contaB.sacar(15D, new PixSaqueService());
         System.out.println(contaB.getSaldoConta());
 
-
     }
-
-
-
 
 }

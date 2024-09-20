@@ -16,7 +16,6 @@ public class Banco {
 
     public Conta acessarConta (int numeroConta) {
         Conta contaAcessada = null;
-
         for(Conta conta : contas) {
             if (conta.getNumeroConta() == numeroConta) {
                 contaAcessada = conta;

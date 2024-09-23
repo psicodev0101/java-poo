@@ -8,6 +8,7 @@ public class PixSaqueService implements SaqueService{
     @Override
     public boolean sacar(double valor, Conta conta) {
         conta.setSaldoConta(conta.getSaldoConta() - valor);
+        conta.setLimiteSaquePix(conta.getLimiteSaquePix()-1);
         return true;
     }
 

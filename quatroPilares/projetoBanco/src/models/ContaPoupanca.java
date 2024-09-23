@@ -25,10 +25,4 @@ public class ContaPoupanca extends Conta {
         }
     }
 
-
-    //nao pode negativar
-    //limite pix saque
-    //SaqueService saqueService (verificar possibilidade de atribuir isso aqui direto
-    // dentro do metodo)
-
 }

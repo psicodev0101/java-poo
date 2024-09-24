@@ -1,7 +1,5 @@
 package models;
 
-import services.PixSaqueService;
-import services.SaqueCaixaEletService;
 import services.SaqueService;
 
 public abstract class Conta {
@@ -16,6 +14,12 @@ public abstract class Conta {
         this.titularConta = titularConta;
     }
 
+    public abstract void depositar (double valor);
+
+    public abstract boolean sacar(double valor, SaqueService saqueService);
+
+
+    //getters e setters
     public int getNumeroConta() {
         return numeroConta;
     }
@@ -39,13 +43,4 @@ public abstract class Conta {
     public void setLimiteSaquePix(int limiteSaquePix) {
         this.limiteSaquePix = limiteSaquePix;
     }
-
-    public abstract void depositar (double valor);
-
-    //public abstract void sacar (double valor);
-        /*precisei inutilizar isso aqui pq quando fiz o metodo sacar usando
-        * injeçao de SaqueService a IDE pediu pra eu atualizar o metodo abstrato
-        * sacar aqui nessa classe, pra poder os parametros baterem*/
-
-    public abstract boolean sacar(double valor, SaqueService saqueService);
 }

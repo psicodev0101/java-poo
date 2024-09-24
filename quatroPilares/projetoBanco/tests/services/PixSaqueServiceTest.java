@@ -14,8 +14,6 @@ class PixSaqueServiceTest {
 
     @Test
     void sacarTest() {
-
-
         contaCorrente.depositar(500);
         pixSaqueService.sacar(250, contaCorrente);
         assertEquals(250, contaCorrente.getSaldoConta());
@@ -25,7 +23,6 @@ class PixSaqueServiceTest {
         pixSaqueService.sacar(250, contaPoupanca);
         assertEquals(250, contaPoupanca.getSaldoConta());
         assertEquals(9, contaPoupanca.getLimiteSaquePix());
-
     }
 
     @Test
@@ -37,7 +34,6 @@ class PixSaqueServiceTest {
 
         //testando saque funcional
         assertTrue(pixSaqueService.confirmarSaqueCC(300, contaCorrente));
-
     }
 
     @Test

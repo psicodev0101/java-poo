@@ -17,6 +17,8 @@ public abstract class Conta {
     public abstract void depositar (double valor);
 
     public abstract boolean sacar(double valor, SaqueService saqueService);
+    // saque sera implementado de forma diferente de acordo com a classe filha (tipo de conta)
+    // ele recebe um valor e saca do saldo da conta optando por diferentes formas de saque
 
 
     //getters e setters

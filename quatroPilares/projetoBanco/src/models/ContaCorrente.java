@@ -20,11 +20,6 @@ public class ContaCorrente extends Conta {
     }
 
     @Override
-    public void depositar(double valor) {
-        setSaldoConta(getSaldoConta() + valor);
-    }
-
-    @Override
     public boolean sacar(double valor, SaqueService saqueService) {
     /*implementa sacar de Conta, recebe o valor e o tipo de saque requisitado*/
         if (saqueService.confirmarSaqueCC(valor, this)) {

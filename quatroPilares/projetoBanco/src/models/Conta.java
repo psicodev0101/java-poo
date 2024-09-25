@@ -14,7 +14,9 @@ public abstract class Conta {
         this.titularConta = titularConta;
     }
 
-    public abstract void depositar (double valor);
+    public void depositar (double valor){
+            setSaldoConta(getSaldoConta() + valor);
+    };
 
     public abstract boolean sacar(double valor, SaqueService saqueService);
     // saque sera implementado de forma diferente de acordo com a classe filha (tipo de conta)

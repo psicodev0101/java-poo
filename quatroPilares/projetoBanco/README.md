@@ -28,4 +28,17 @@ Módulo de Conta Bancária:
 
 ### Requisitos
 
-(continuar: implementar requisitos funcionais e nao funcionais)
+> **Requisitos Funcionais (RF):**
+>
+> - **RF01:** O sistema deve permitir que o usuário realize saques: 
+>   - O sistema deve aceitar diferentes métodos de saque.
+>   - O sistema deve ser capaz de alternar entre métodos de saque em tempo de execução.
+> - **RF02:** O sistema deve aplicar uma taxa pré-definida para saques via Caixa Eletrônico.
+>   - Caso o valor do saldo disponível seja insuficiente para cobrir o valor do saque adicionado da taxa, o sistema deverá reportar erro e o saque deve ser negado.
+> - **RF03:** O sistema deve permitir um máximo de dez saques via pix por conta.
+>   - Caso este limite seja atingido, serão negados novos saques nessa modalidade.
+> - **RF04:** O sistema deve fazer a verificação dos requisitos para o saque de acordo com o tipo de conta (CC ou Poupança).
+>   - O sistema deve reportar erro caso qualquer requisito não esteja de acordo com o esperado.
+
+
+

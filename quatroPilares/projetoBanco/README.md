@@ -23,7 +23,7 @@ Módulo de Conta Bancária:
 >
 > **Modalidades de saque**
 > 
-> - **Saque via Caixa Eletrônico:** Cobra uma taxa fixa de R$ 7,50 por saque.
+> - **Saque via Caixa Eletrônico:** Cobra uma taxa fixa pré definida por saque.
 > - **Saque via pix:** É gratuito, porém limitado a 10 saques por conta (devido aos fins da prática, não implementei mecanismos que restaurem a contagem).
 
 ### Requisitos

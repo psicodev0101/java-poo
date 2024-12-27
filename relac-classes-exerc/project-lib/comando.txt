@@ -1,0 +1,55 @@
+Enunciado do Exercício
+Implemente um sistema simples para gerenciar uma biblioteca com os seguintes requisitos:
+
+Associação:
+
+Um Bibliotecário está associado a uma Biblioteca, indicando qual bibliotecário é responsável por gerenciar aquela biblioteca.
+A associação é unidirecional (a biblioteca sabe quem é o bibliotecário, mas o bibliotecário não precisa conhecer a biblioteca).
+Agregação:
+
+A Biblioteca possui uma coleção de Livros, mas os livros existem independentemente da biblioteca.
+Você pode adicionar ou remover livros da biblioteca, mas eles continuam existindo fora dela.
+
+Composição:
+Cada Livro possui uma Ficha Técnica, que contém informações como título, autor e ISBN.
+A composição indica que a Ficha Técnica é criada e destruída junto com o Livro.
+
+
+Classes a serem implementadas
+
+### Bibliotecario
+
+Atributo: nome
+Método: Nenhum específico para este exercício.
+
+### Livro
+
+Atributos:
+titulo
+autor
+isbn (composição - instância da classe ISBN)
+
+Método:
+exibirDetalhes() (exibe as informações do livro, incluindo o código ISBN)
+
+
+### ISBN
+Atributos:
+codigo (código do ISBN, como "978-3-16-148410-0")
+
+Métodos:
+getCodigo() (retorna o código do ISBN)
+
+
+
+### Biblioteca
+
+Atributos:
+nome
+bibliotecario (associação)
+livros (agregação - lista de livros)
+
+Métodos:
+adicionarLivro(Livro livro)
+removerLivro(Livro livro)
+listarLivros()

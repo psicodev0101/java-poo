@@ -1,9 +1,9 @@
-package wildcards;
+package wildcards.simpleWildCards;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class simpleWC {
     public static void main(String[] args) {
 
         //criando duas listas
